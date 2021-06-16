@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">AppNoticias</string>
+
+    //Main Activity
+    <string name="nome_jornal">COTIDIANO</string>
+    <string name="texto_tela_inicial">Fique por dentro de diversas noticias do mundo todo</string>
+    <string name="campo_email">Digite seu e-mail</string>
+    <string name="campo_senha">Digite sua senha</string>
+    <string name="texto_email">E-mail</string>
+    <string name="texto_senha">Senha</string>
+    <string name="botaoLogin">LOGIN</string>
+    <string name="texto_ou">OU</string>
+    <string name="botaoCadastrese">CADASTRE-SE</string>
+    <string name="botaoConvidado">CONVIDADO</string>
+
+    //TelaRecentes
+    <string name="noticia_recentes_paragrafo">NOTÍCIAS RECENTES</string>
+
+    <string name="noticia_recentes_01">ES começa a vacinar população de 18 a 49 anos com meia dose da AstraZeneca para estudo</string>
+    <string name="data_1">13/06/2021 - G1</string>
+    <string name="saiba_mais">SAIBA MAIS</string>
+    <string name="reportagem_completa">LER NOTÍCIA COMPLETA</string>
+
+    <string name="noticia_recentes_02">Fábrica fatura R$ 250 mil ao mês com malas feitas de garrafas pet recicladas</string>
+    <string name="data_2">13/06/2021 - G1</string>
+
+    <string name="noticia_recente_1_resumo">
+        A vacinação em pessoas de 18 a 49 anos começou na manhã deste
+        domingo na região Metropolitana de Vitória.
+        A campanha pretende imunizar cerca de 85% dos vacinados.
+        Porém, a vacinação faz parte de um teste de eficácia de meia dose da AstraZeneca.
+    </string>
+
+    <string name="noticia_recente_2_resumo">
+        Com a chegada da pandemia todos nós precisamos nos adaptar a novas ideas, ao novo mercado.
+        A Kamaleon Bags levou isso a sério, e nesse momento de angústia eles conseguiram 
+        dar a volta por cima, e com malas feitas de garrafa pet eles faturaram R$250 mi
+    </string>
+
+    //TelaMenuPrincipal
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_recentes">Noticías Recentes</string>
+    <string name="menu_escolha_assunto">Escolha um assunto</string>
+
+    //EscolherAssunto
+    <string name="brasil">BRASIL</string>
+    <string name="covid_19">COVID-19</string>
+    <string name="tecnologia">TECNOLOGIA</string>
+
+    //TelaPerfil
+    <string name="cria_sua_conta">
+        Acesse sua conta para encontrar mais noticías,
+        saber os principais acontecimentos do dia por email e ter acesso aos serviços do Cotidiano.
+    </string>
+    <string name="cadastrese">Não tem conta? Cadastre-se!</string>
+</resources>

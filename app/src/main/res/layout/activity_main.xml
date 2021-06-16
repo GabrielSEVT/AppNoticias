@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="auto"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textoTelaInicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/josefin_slab_bold"
+            android:text="@string/nome_jornal"
+            android:textColor="@color/black"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/campoEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:width="365dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/campo_email"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAcesso" />
+
+        <EditText
+            android:id="@+id/campoSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:width="365dp"
+            android:ems="10"
+            android:hint="@string/campo_senha"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoEmail"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/texto_email"
+            app:layout_constraintBottom_toTopOf="@+id/campoEmail"
+            app:layout_constraintStart_toStartOf="@+id/campoEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textAcesso" />
+
+        <TextView
+            android:id="@+id/textSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_senha"
+            app:layout_constraintBottom_toTopOf="@+id/campoSenha"
+            app:layout_constraintStart_toStartOf="@+id/campoSenha" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:width="300dp"
+            android:text="@string/botaoLogin"
+            app:backgroundTint="@color/azul_principal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoSenha" />
+
+        <Button
+            android:id="@+id/btnCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:width="300dp"
+            android:text="@string/botaoCadastrese"
+            app:backgroundTint="@color/azul_principal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOu" />
+
+        <Button
+            android:id="@+id/btnConvidado"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:width="300dp"
+            android:text="@string/botaoConvidado"
+            android:textColor="@color/azul_principal"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCadastro"
+            app:strokeColor="@color/azul_principal"
+            app:strokeWidth="3dp" />
+
+        <TextView
+            android:id="@+id/textOu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/texto_ou"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <TextView
+            android:id="@+id/textAcesso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:width="365dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/texto_tela_inicial"
+            android:textColor="@color/azul_principal"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoTelaInicial" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConvidado"
+            app:srcCompat="@drawable/imagem_lendo_jornal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
