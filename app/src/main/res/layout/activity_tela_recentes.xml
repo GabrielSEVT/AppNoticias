@@ -81,10 +81,10 @@
         android:id="@+id/imagemNoticia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/noticias_recentes" />
@@ -125,28 +125,29 @@
         android:id="@+id/btnSaibaMais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:width="350dp"
         android:text="@string/saiba_mais"
-        app:backgroundTint="@color/material_on_surface_emphasis_medium"
-        app:iconTint="#FFFFFF"
+        app:backgroundTint="#34000000"
+        app:iconTint="#FF0000"
         app:layout_constraintBottom_toTopOf="@+id/tituloNoticia3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#FFFFFF" />
+        app:strokeColor="#E6FF0000"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btnSaibaMais2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:width="350dp"
         android:text="@string/saiba_mais"
-        app:backgroundTint="@color/material_on_surface_emphasis_medium"
+        app:backgroundTint="#33000000"
         app:layout_constraintBottom_toBottomOf="@+id/imagemNoticia3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#E6FF0000"
+        app:strokeWidth="2dp" />
 
     <TextView
         android:id="@+id/textView4"

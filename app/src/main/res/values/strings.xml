@@ -41,6 +41,7 @@
     <string name="menu_perfil">Perfil</string>
     <string name="menu_recentes">Noticías Recentes</string>
     <string name="menu_escolha_assunto">Escolha um assunto</string>
+    <string name="feedback">FeedBack</string>
 
     //EscolherAssunto
     <string name="brasil">BRASIL</string>
@@ -53,4 +54,10 @@
         saber os principais acontecimentos do dia por email e ter acesso aos serviços do Cotidiano.
     </string>
     <string name="cadastrese">Não tem conta? Cadastre-se!</string>
+
+    //TelaFeedback
+    <string name="assunto">Título</string>
+    <string name="mensagem">Deixe sua sugestão, crítica, etc.</string>
+    <string name="enviar_email">ENVIAR E-MAIL</string>
+    <string name="email_jornal">cotidiano@gmail.com</string>
 </resources>

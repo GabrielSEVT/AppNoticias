@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppNoticias"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TelaNoticiaCompleta2"></activity>
+        <activity android:name=".TelaFeedback"></activity>
+        <activity android:name=".TelaNoticiaCompleta2" />
         <activity android:name=".TelaSaibaMais2" />
         <activity android:name=".TelaNoticiaCompleta1" />
         <activity android:name=".TelaSaibaMais1" />

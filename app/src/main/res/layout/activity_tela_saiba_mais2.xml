@@ -52,11 +52,12 @@
         android:id="@+id/btnLerNoticiaCompleta2"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:width="350dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:width="250dp"
         android:text="@string/reportagem_completa"
         app:backgroundTint="@color/azul_principal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resumo_noticia2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@ public class TelaMenuPrincipal extends AppCompatActivity {
     Button btnPerfil;
     Button btnNoticiasRecentes;
     Button bntEscolherAssunto;
+    Button btnFeedback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,15 @@ public class TelaMenuPrincipal extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(TelaMenuPrincipal.this, TelaEscolherAssunto.class);
                 startActivity(intent);
+            }
+        });
+
+        btnFeedback = (Button)findViewById(R.id.btnFeedback);
+        btnFeedback.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(TelaMenuPrincipal.this, TelaFeedback.class);
+               startActivity(intent);
             }
         });
     }
