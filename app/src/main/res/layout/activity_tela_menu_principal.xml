@@ -87,4 +87,25 @@
         app:layout_constraintTop_toBottomOf="@+id/btnEscolherAssunto"
         app:strokeColor="@color/azul_principal"
         app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/btnLocalizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:width="350dp"
+        android:drawableLeft="@drawable/email"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="10dp"
+        android:text="@string/localização"
+        android:textColor="@color/azul_principal"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFeedback"
+        app:strokeColor="@color/azul_principal"
+        app:strokeWidth="1dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

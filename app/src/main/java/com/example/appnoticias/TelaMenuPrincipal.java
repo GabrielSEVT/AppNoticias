@@ -12,6 +12,7 @@ public class TelaMenuPrincipal extends AppCompatActivity {
     Button btnPerfil;
     Button btnNoticiasRecentes;
     Button bntEscolherAssunto;
+    Button btnLocalizacao;
     Button btnFeedback;
 
     @Override
@@ -54,5 +55,15 @@ public class TelaMenuPrincipal extends AppCompatActivity {
                startActivity(intent);
             }
         });
+
+        btnLocalizacao = (Button)findViewById(R.id.btnLocalizacao);
+        btnLocalizacao.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TelaMenuPrincipal.this, TelaLocalizacao.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

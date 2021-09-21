@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaLocalizacao">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:width="350dp"
+            android:drawableLeft="@drawable/localizacao_usuario"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="60dp"
+            android:paddingBottom="10dp"
+            android:text="@string/localização"
+            android:textColor="@color/azul_principal"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFeedback"
+            app:strokeColor="@color/azul_principal"
+            app:strokeWidth="1dp"
+            android:onClick="buscarInformacoesGPS"/>
+
+        <WebView
+            android:id="@+id/webv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

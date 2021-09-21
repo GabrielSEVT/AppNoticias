@@ -60,4 +60,6 @@
     <string name="mensagem">Deixe sua sugestão, crítica, etc.</string>
     <string name="enviar_email">ENVIAR E-MAIL</string>
     <string name="email_jornal">cotidiano@gmail.com</string>
+    <string name="localização">LOCALIZAÇÃO</string>
+    <string name="localizacao">SAIBA SUA LOCALIZAÇÃO</string>
 </resources>
