@@ -47,7 +47,7 @@ public class TelaTemperatura extends AppCompatActivity implements SensorEventLis
     @Override
     public void onSensorChanged(SensorEvent event) {
         float ambient_temperature = event.values[0];
-        temperaturelabel.setText("Ambient Temperature:\n " + String.valueOf(ambient_temperature) + getResources().getString(R.string.temperatura));
+        temperaturelabel.setText("Temperatura:\n" + String.valueOf(ambient_temperature) + getResources().getString(R.string.celsius));
     }
 
     @Override
