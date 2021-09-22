@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppNoticias"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TelaLocalizacao"></activity>
+        <activity android:name=".TelaTemperatura"></activity>
+        <activity android:name=".TelaLocalizacao" />
         <activity android:name=".TelaFeedback" />
         <activity android:name=".TelaNoticiaCompleta2" />
         <activity android:name=".TelaSaibaMais2" />

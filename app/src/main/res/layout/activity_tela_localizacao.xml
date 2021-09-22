@@ -23,7 +23,7 @@
             android:paddingTop="10dp"
             android:paddingRight="60dp"
             android:paddingBottom="10dp"
-            android:text="@string/localização"
+            android:text="@string/localizacao"
             android:textColor="@color/azul_principal"
             app:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"

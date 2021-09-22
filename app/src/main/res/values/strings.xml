@@ -62,4 +62,5 @@
     <string name="email_jornal">cotidiano@gmail.com</string>
     <string name="localização">LOCALIZAÇÃO</string>
     <string name="localizacao">SAIBA SUA LOCALIZAÇÃO</string>
+    <string name="temperatura">temperatura</string>
 </resources>

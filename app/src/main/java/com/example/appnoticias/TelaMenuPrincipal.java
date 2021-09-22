@@ -13,6 +13,7 @@ public class TelaMenuPrincipal extends AppCompatActivity {
     Button btnNoticiasRecentes;
     Button bntEscolherAssunto;
     Button btnLocalizacao;
+    Button btnTemperatura;
     Button btnFeedback;
 
     @Override
@@ -61,6 +62,15 @@ public class TelaMenuPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TelaMenuPrincipal.this, TelaLocalizacao.class);
+                startActivity(intent);
+            }
+        });
+
+        btnTemperatura = (Button)findViewById(R.id.btnTemperatura);
+        btnTemperatura.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TelaMenuPrincipal.this, TelaTemperatura.class);
                 startActivity(intent);
             }
         });
