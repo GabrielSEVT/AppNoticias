@@ -22,12 +22,9 @@ public class TelaLocalizacao extends AppCompatActivity {
 
     public void buscarInformacoesGPS(View v) {
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)   != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)   != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(TelaLocalizacao.this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-            ActivityCompat.requestPermissions(TelaLocalizacao.this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-            ActivityCompat.requestPermissions(TelaLocalizacao.this, new String[] {Manifest.permission.ACCESS_NETWORK_STATE}, 1);
             return;
         }
 
