@@ -42,24 +42,24 @@ public class MainActivity extends AppCompatActivity {
         btnCadastrar = findViewById(R.id.btnCadastrar);
         type = (Type) getIntent().getSerializableExtra(Constantes.STORAGE_TYPE);
 
-        /*sharedPreferences = getSharedPreferences(SHARED_PREF_NOME , MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NOME , MODE_PRIVATE);
 
         String nome = sharedPreferences.getString(KEY_NOME, null);
 
         if(nome != null){
             Intent intent = new Intent(MainActivity.this, TelaRecentes.class);
             startActivity(intent);
-        }*/
+        }
 
         btnAcessar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 String nome = txtNome.getText().toString().trim();
                 String email = txtEmail.getText().toString().trim();
-                    /*SharedPreferences.Editor editor = sharedPreferences.edit();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString(KEY_NOME, txtNome.getText().toString());
                     editor.putString(KEY_EMAIL, txtEmail.getText().toString());
-                    editor.apply();*/
+                    editor.apply();
                     try {
                         lerInterno();
                     } catch (FileNotFoundException e) {
@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
                 if(nome.isEmpty() || email.isEmpty()){
                     Toast.makeText(MainActivity.this, "Preencha os campos acima para ter acesso", Toast.LENGTH_LONG).show();
                 } else {
-                    /*SharedPreferences.Editor editor = sharedPreferences.edit();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString(KEY_NOME, txtNome.getText().toString());
                     editor.putString(KEY_EMAIL, txtEmail.getText().toString());
-                    editor.apply();*/
+                    editor.apply();
                     salvarLogin();
 
                     Intent intent = new Intent (MainActivity.this, TelaRecentes.class);
@@ -139,4 +139,5 @@ public class MainActivity extends AppCompatActivity {
             scanner.close();
         }
     }
+
 }
