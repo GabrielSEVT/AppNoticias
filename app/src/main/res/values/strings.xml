@@ -67,4 +67,9 @@
     <string name="acessar_app">Identifique-se e tenha acesso ao COTIDIANO!</string>
     <string name="ACESSAR">ACESSAR</string>
     <string name="SAIR">sair</string>
+    <string name="botaoCadastrar">CADASTRAR</string>
+    <string name="botaoAcessar">ACESSAR</string>
+    <string name="suporte">SUPORTE</string>
+    <string name="enviar_mensagem_suporte">ENVIAR</string>
+    <string name="ver_ultima_mensagem">VISUALIZA MENSAGEM</string>
 </resources>

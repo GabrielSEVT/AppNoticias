@@ -8,14 +8,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Type;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText txtNome, txtEmail;
-    Button btnAcessar;
+    Button btnAcessar, btnCadastrar;
     SharedPreferences sharedPreferences;
+    private Type type;
 
     private static final String SHARED_PREF_NOME = "idenficacaoUsuario";
     private static final String KEY_NOME = "nome";
@@ -30,29 +39,54 @@ public class MainActivity extends AppCompatActivity {
         txtNome = findViewById(R.id.txtNome);
         txtEmail = findViewById(R.id.txtEmail);
         btnAcessar = findViewById(R.id.btnAcessar);
+        btnCadastrar = findViewById(R.id.btnCadastrar);
+        type = (Type) getIntent().getSerializableExtra(Constantes.STORAGE_TYPE);
 
-        sharedPreferences = getSharedPreferences(SHARED_PREF_NOME , MODE_PRIVATE);
+        /*sharedPreferences = getSharedPreferences(SHARED_PREF_NOME , MODE_PRIVATE);
 
         String nome = sharedPreferences.getString(KEY_NOME, null);
 
         if(nome != null){
             Intent intent = new Intent(MainActivity.this, TelaRecentes.class);
             startActivity(intent);
-        }
+        }*/
 
-        btnAcessar = (Button)findViewById(R.id.btnAcessar);
         btnAcessar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 String nome = txtNome.getText().toString().trim();
                 String email = txtEmail.getText().toString().trim();
-                if(nome.equals("") || email.equals("")){
-                    Toast.makeText(MainActivity.this, "Preencha os campos acima para ter acesso", Toast.LENGTH_LONG).show();
-                } else {
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    /*SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString(KEY_NOME, txtNome.getText().toString());
                     editor.putString(KEY_EMAIL, txtEmail.getText().toString());
-                    editor.apply();
+                    editor.apply();*/
+                    try {
+                        lerInterno();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent (MainActivity.this, TelaRecentes.class);
+                    startActivity(intent);
+
+                    Toast.makeText(MainActivity.this, "Acesso realizado", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        btnCadastrar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String nome = txtNome.getText().toString().trim();
+                String email = txtEmail.getText().toString().trim();
+                if(nome.isEmpty() || email.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Preencha os campos acima para ter acesso", Toast.LENGTH_LONG).show();
+                } else {
+                    /*SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString(KEY_NOME, txtNome.getText().toString());
+                    editor.putString(KEY_EMAIL, txtEmail.getText().toString());
+                    editor.apply();*/
+                    salvarLogin();
 
                     Intent intent = new Intent (MainActivity.this, TelaRecentes.class);
                     startActivity(intent);
@@ -61,37 +95,48 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
-        /*
+    public void salvarLogin(){
+        String nome = txtNome.getText().toString();
+        String email = txtEmail.getText().toString();
+        String path;
 
-        btnLogin = (Button)findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                campoEmail = (TextView)findViewById(R.id.campoEmail);
-                campoSenha = (TextView)findViewById(R.id.campoSenha);
-                String email = campoEmail.getText().toString().trim();
-                String senha = campoSenha.getText().toString().trim();
-                if(email.equals("cotidiano@gmail.com") && senha.equals("admin")){
-                    Intent intent = new Intent (MainActivity.this, TelaRecentes.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MainActivity.this, "Login ou senha inválida",
-                            Toast.LENGTH_LONG).show();
-                }
+        try{
+            path = salvarInterno(nome);
+            path = salvarInterno(email);
+            Toast.makeText(this, "Arquivo gravado em" + path, Toast.LENGTH_SHORT).show();
+            finish();
+        } catch (IOException e) {
+            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
+    }
+
+    private String salvarInterno(String dado) throws FileNotFoundException {
+        FileOutputStream fos = openFileOutput(Constantes.FILE_NAME, MODE_PRIVATE);
+        PrintWriter pw = new PrintWriter(fos);
+        try {
+            pw.print(dado);
+            return getFilesDir().getPath() + File.separator + Constantes.FILE_NAME;
+        } finally {
+            pw.close();
+        }
+    }
+
+    private void lerInterno() throws FileNotFoundException {
+        FileInputStream fis = openFileInput(Constantes.FILE_NAME);
+        Scanner scanner = new Scanner(fis);
+        try{
+            StringBuilder sb = new StringBuilder();
+            while (scanner.hasNext()){
+                String line = scanner.nextLine();
+                sb.append(line).append("\n");
             }
-        });
-
-        btnConvidado = (Button)findViewById(R.id.btnConvidado);
-        btnConvidado.setOnClickListener(new View.OnClickListener(){
-           @Override
-           public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, TelaRecentes.class);
-                startActivity(intent);
-           }
-        });
-
-        */
-
+            txtEmail.setText(sb.toString());
+            txtNome.setText(sb.toString());
+        } finally {
+            scanner.close();
+        }
     }
 }

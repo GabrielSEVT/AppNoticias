@@ -24,7 +24,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="@string/acessar_app"
-            android:textColor="#5A5959"
+            android:textColor="#004FD8"
             android:textColorLink="#154349"
             android:textSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,13 +65,26 @@
             android:layout_height="70dp"
             android:layout_marginTop="96dp"
             android:width="350dp"
-            android:text="@string/ACESSAR"
+            android:text="@string/botaoAcessar"
             android:textSize="20sp"
             app:backgroundTint="@color/azul_principal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:width="350dp"
+            android:text="@string/botaoCadastrar"
+            android:textSize="20sp"
+            app:backgroundTint="@color/azul_principal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.627"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAcessar" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
